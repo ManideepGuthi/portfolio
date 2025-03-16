@@ -1,0 +1,233 @@
+/* General Styles */
+body {
+    background: linear-gradient(to right, #6A82FF, #9B51E0); /* Vibrant gradient */
+    font-family: 'Poppins', sans-serif;
+    color: #333; /* Dark text for better readability on light backgrounds */
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+/* Container */
+.container {
+    width: 90%; /* Increased width for better spacing */
+    max-width: 900px; /* Maximum width for larger screens */
+    margin: 40px auto; /* Reduced top margin for better centering */
+    padding: 40px; /* Increased padding */
+    background: #fff; /* Clean white background */
+    border-radius: 16px; /* More rounded corners */
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1); /* Deeper shadow for a lifted effect */
+    text-align: center;
+    animation: fadeIn 0.8s ease-in-out;
+}
+
+/* Heading */
+h2 {
+    color: #512DA8; /* Deep purple for heading */
+    font-size: 32px; /* Increased font size */
+    font-weight: 700; /* Bolder font weight */
+    margin-bottom: 25px;
+    text-shadow: 1px 1px 0 rgba(0, 0, 0, 0.05); /* Subtle text shadow */
+}
+
+/* Username Style */
+.username {
+    font-size: 1.4em; /* Slightly larger */
+    font-weight: 500; /* Medium weight */
+    color: #777; /* Softer color */
+    margin-bottom: 30px;
+}
+
+/* Skills Grid */
+.skills-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); /* Adjust minmax for wider cards */
+    gap: 25px; /* Increased gap */
+    justify-content: center;
+    padding: 20px 0; /* Add some vertical padding */
+}
+
+/* Skill Card */
+.skill-card {
+    background: #f9f9f9; /* Light gray background */
+    padding: 30px; /* Increased padding */
+    border-radius: 14px; /* Slightly more rounded */
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08); /* Softer shadow */
+    text-align: left;
+    transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out; /* Smoother transition */
+    border: 1px solid #eee; /* Subtle border */
+}
+
+.skill-card:hover {
+    transform: translateY(-5px); /* Lift effect on hover */
+    box-shadow: 0 8px 22px rgba(0, 0, 0, 0.12); /* Enhanced shadow on hover */
+}
+
+/* Skill Name */
+.skill-name {
+    font-size: 1.2em; /* Adjusted font size */
+    font-weight: 600; /* Bolder */
+    color: #673AB7; /* Purple accent color */
+    display: flex;
+    align-items: center;
+    gap: 12px; /* Increased gap */
+    margin-bottom: 15px;
+}
+
+.skill-name i {
+    font-size: 1.1em;
+    color: #7E57C2; /* Lighter purple */
+}
+
+/* Progress Bar */
+.progress-bar {
+    height: 10px; /* Slightly thinner */
+    width: 100%;
+    background: #e0f2f7; /* Light blue background */
+    border-radius: 5px; /* Rounded corners */
+    overflow: hidden;
+    position: relative;
+}
+
+.progress {
+    height: 100%;
+    background: linear-gradient(to right, #00BCD4, #009688); /* Teal gradient */
+    width: 0;
+    border-radius: 5px; /* Match progress bar radius */
+    transition: width 0.7s cubic-bezier(0.175, 0.885, 0.32, 1.275); /* More dynamic transition */
+}
+
+/* Experience & Certifications */
+.experience,
+.certifications {
+    font-size: 0.95em; /* Slightly smaller */
+    color: #777;
+    margin-top: 8px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.experience i,
+.certifications i {
+    color: #9E9E9E; /* Gray icons */
+}
+
+.certifications {
+    font-weight: 500; /* Medium weight */
+    color: #4CAF50; /* Green for certifications */
+}
+
+/* Buttons */
+.dashboard-btn,
+.action-btn {
+    display: inline-flex; /* Use flex for icon alignment */
+    align-items: center;
+    gap: 8px;
+    background: #673AB7; /* Purple button */
+    color: white;
+    text-decoration: none;
+    padding: 12px 20px; /* Adjusted padding */
+    border-radius: 8px; /* More rounded */
+    margin-top: 30px; /* Increased margin */
+    font-size: 1em;
+    font-weight: 500;
+    transition: background 0.3s ease-in-out, transform 0.2s ease-in-out; /* Added transform */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.08); /* Added shadow to button */
+}
+
+.dashboard-btn:hover,
+.action-btn:hover {
+    background: #5E35B1; /* Darker purple on hover */
+    transform: translateY(-2px); /* Slight lift on hover */
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.12); /* Enhanced shadow on hover */
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .container {
+        width: 95%;
+        padding: 30px;
+        margin: 30px auto;
+    }
+
+    h2 {
+        font-size: 28px;
+    }
+
+    .skills-container {
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        gap: 15px;
+    }
+
+    .skill-card {
+        padding: 20px;
+    }
+
+    .skill-name {
+        font-size: 1.1em;
+        margin-bottom: 10px;
+    }
+
+    .experience,
+    .certifications {
+        font-size: 0.9em;
+    }
+
+    .dashboard-btn,
+    .action-btn {
+        padding: 10px 16px;
+        font-size: 0.9em;
+        margin-top: 25px;
+    }
+}
+
+@media (max-width: 576px) {
+    .container {
+        padding: 20px;
+        margin: 20px auto;
+    }
+
+    h2 {
+        font-size: 24px;
+    }
+
+    .username {
+        font-size: 1.2em;
+        margin-bottom: 20px;
+    }
+
+    .skills-container {
+        grid-template-columns: 1fr;
+    }
+
+    .skill-card {
+        padding: 15px;
+    }
+
+    .skill-name {
+        font-size: 1em;
+    }
+
+    .dashboard-btn,
+    .action-btn {
+        padding: 8px 14px;
+        font-size: 0.85em;
+        margin-top: 20px;
+    }
+}
